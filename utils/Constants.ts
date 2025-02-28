@@ -12,6 +12,7 @@ export enum MainnetNetwork {
     Aurora = 'aurora',
     Avalanche = 'avalanche',
     Base = 'base',
+    Berachain = 'berachain',
     BSC = 'bsc',
     Blast = 'blast',
     Canto = 'canto',

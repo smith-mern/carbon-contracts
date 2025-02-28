@@ -480,6 +480,18 @@ const config: HardhatUserConfig = {
                 }
             }
         },
+        [DeploymentNetwork.Berachain]: {
+            chainId: chainIds[DeploymentNetwork.Berachain],
+            url: rpcUrls[DeploymentNetwork.Berachain],
+            saveDeployments: true,
+            live: true,
+            deploy: [`deploy/scripts/${DeploymentNetwork.Berachain}`],
+            verify: {
+                etherscan: {
+                    apiKey: VERIFY_API_KEY
+                }
+            }
+        },
         [DeploymentNetwork.Sepolia]: {
             chainId: chainIds[DeploymentNetwork.Sepolia],
             url: rpcUrls[DeploymentNetwork.Sepolia],
@@ -558,6 +570,14 @@ const config: HardhatUserConfig = {
               urls: {
                 apiURL: "https://explorer.evm.iota.org/api",
                 browserURL: "https://explorer.evm.iota.org"
+              }
+            },
+            {
+              network: DeploymentNetwork.Berachain,
+              chainId: chainIds[DeploymentNetwork.Berachain],
+              urls: {
+                apiURL: "https://api.berascan.com/api",
+                browserURL: "https://berascan.com"
               }
             }
           ]

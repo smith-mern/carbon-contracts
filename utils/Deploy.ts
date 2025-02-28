@@ -118,6 +118,10 @@ export const fundAccount = async (account: string | SignerWithAddress, amount?: 
 
     const { ethWhale } = await getNamedSigners();
 
+    if (!ethWhale) {
+        return;
+    }
+
     return ethWhale.sendTransaction({
         value: amount ?? TEST_FUNDING,
         to: address
