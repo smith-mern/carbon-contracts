@@ -11,7 +11,6 @@ Rewards structure:
 | Risk          | Reward     |
 | ------------- | ---------- |
 | Critical      | $1,000,000 |
-| High          | $40,000    |
 | Medium        | $5,000     |
 | Low           | $1,000     |
 | Informational | $0         |
